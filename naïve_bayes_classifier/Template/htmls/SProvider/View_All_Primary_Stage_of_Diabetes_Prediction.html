@@ -1,0 +1,80 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style7 {color: #FFFF00}
+        .style8 {color: #FF0000; font-weight: bold; font-size: 24px; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+
+
+ 					<form role="form" method="POST" >
+						<div class="tweettext">
+                          <p><span class="style8">Predicted the Novel Coronavirus(0-Negatrive and 1-Positive)</span></p>
+                          <table border="5" bordercolor="#FF00FF">
+
+        {% for row in excel_data %}
+<tr>
+            {% for cell in row %}
+                     <td bgcolor="#FFFFFF">   {{ cell }}&nbsp;&nbsp&nbsp;&nbsp;
+            {% endfor %}
+
+            <br></td></tr>
+        {% endfor %}
+                  </table>
+			</div>
+{{obj}}
+
+						</fieldset>
+					</form>
+
+
+              </div>
+
+		  </div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+      </div>
+    </div>
+    </div>
+{% endblock %}
+    <tr>
